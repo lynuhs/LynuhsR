@@ -7,6 +7,6 @@
 #' strClean(str)
 
 strClean <- function(str){
-  gsub("^\\s+|\\s+$", "", str)
+  str <- gsub("^\\s+|\\s+$", "", str)
   return(str)
 }
