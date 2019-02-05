@@ -1,0 +1,14 @@
+Package: LynuhsR
+Title: Smart functions to clean and structure data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Linus",
+           family = "Larsson",
+           role = c("aut", "cre"),
+           email = "linus@lynuhs.com")
+URL: https://lynuhs.com
+Description: Functions to clean and structure data.
+License: What license it uses
+Encoding: UTF-8
+LazyData: TRUE
+RoxygenNote: 6.1.1.9000
