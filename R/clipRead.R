@@ -8,7 +8,7 @@
 #' @examples
 #' clip.read(data, format=c("character","dataFrame"), header=TRUE)
 
-clipRead <- function(format = "character", header = TRUE){
+clip.read <- function(format = "character", header = TRUE){
   if(format == "character"){
     data <- readClipboard()
   } else if (format == "dataFrame"){
@@ -22,7 +22,7 @@ clipRead <- function(format = "character", header = TRUE){
     }
 
     if(header){ colnames(df) <- data[[1]] }
-    data <- factorsToCharacter(data)
+    data <- factorToCharacter(data)
   } else {
     stop("Incorrect format chosen!")
   }

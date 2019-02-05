@@ -7,9 +7,9 @@
 #' @param col.names Decides if the output should keep column names or not, defaults to TRUE
 #' @export
 #' @examples
-#' clip.write(data)
+#' clip.write(data, sep="\t", row.names=FALSE, col.names=TRUE)
 
-clipWrite <- function(data, sep = "\t", row.names = FALSE, col.names = TRUE){
+clip.write <- function(data, sep = "\t", row.names = FALSE, col.names = TRUE){
   if(is.data.frame(data)){
     write.table(data, "clipboard", sep=sep, row.names=row.names, col.names=col.names)
   } else {
