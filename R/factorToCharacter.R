@@ -15,7 +15,7 @@ factorToCharacter <- function(data){
     }
   } else if (is.factor(data)){
     data <- as.character(data)
-  } else if (!is.character(data)){
+  } else if (!(is.character(data))){
     stop("Data must be a data frame or factor vector!")
   }
 
