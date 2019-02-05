@@ -13,5 +13,5 @@ factorToCharacter(data)
 This function will change a data frame's columns from factor to character
 }
 \examples{
-factorToCharacter()
+factorToCharacter(data)
 }

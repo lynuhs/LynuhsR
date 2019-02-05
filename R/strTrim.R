@@ -4,7 +4,7 @@
 #' @param str The string that should have it's whitespace removed
 #' @export
 #' @examples
-#' strTrim()
+#' strTrim(str)
 
 strTrim <- function(str){
   gsub("^\\s+|\\s+$", "", str)

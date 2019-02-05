@@ -4,7 +4,7 @@
 #' @param data The data frame or factor vector that should be converted
 #' @export
 #' @examples
-#' factorToCharacter()
+#' factorToCharacter(data)
 
 factorToCharacter <- function(data){
   if(is.data.frame((data))){

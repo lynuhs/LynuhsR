@@ -13,5 +13,5 @@ strTrim(str)
 This function will remove all whitespace before and after a string
 }
 \examples{
-strTrim()
+strTrim(str)
 }
