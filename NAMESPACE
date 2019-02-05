@@ -3,4 +3,4 @@
 export(clipRead)
 export(clipWrite)
 export(factorToCharacter)
-export(strTrim)
+export(strClean)
