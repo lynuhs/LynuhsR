@@ -9,6 +9,8 @@ clip.read(format = "character", header = TRUE)
 \arguments{
 \item{format}{The format of the output, defaults to character}
 
+\item{header}{If the copied data has a header row for dataFrame, defaults to TRUE}
+
 \item{data}{The data that should be copied to the clipboard}
 }
 \description{

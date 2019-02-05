@@ -3,7 +3,8 @@
 #' This function will copy data from the clipboard
 #' @param data The data that should be copied to the clipboard
 #' @param format The format of the output, defaults to character
-#' @export header If the copied data has a header row for dataFrame, defaults to TRUE
+#' @param header If the copied data has a header row for dataFrame, defaults to TRUE
+#' @export
 #' @examples
 #' clip.read(data, format=c("character","dataFrame"), header=TRUE)
 
