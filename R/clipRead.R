@@ -8,7 +8,7 @@
 #' @examples
 #' clip.read(data, format=c("character","dataFrame"), header=TRUE)
 
-clip.read <- function(format = "character", header = TRUE){
+clipRead <- function(format = "character", header = TRUE){
   if(format == "character"){
     data <- readClipboard()
   } else if (format == "dataFrame"){
