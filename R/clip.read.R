@@ -2,17 +2,26 @@
 #'
 #' This function will copy data from the clipboard
 #' @param data The data that should be copied to the clipboard
-#' @param format The format of the output, defaults to character
+#' @param type The type of the output, defaults to auto
 #' @param header If the copied data has a header row for dataFrame, defaults to TRUE
 #' @export
 #' @examples
-#' clip.read(data, format=c("character","dataFrame"), header=TRUE)
+#' clip.read(data, type=c("auto","character","dataFrame"), header=TRUE)
 
-clip.read <- function(format = "character", header = TRUE){
-  if(format == "character"){
-    data <- readClipboard()
-  } else if (format == "dataFrame"){
-    data <- readClipboard()
+clip.read <- function(type = "auto", header = TRUE){
+  data <- readClipboard()
+
+  if(type == "auto"){
+    type <- "character"
+    if(regexpr("\t", data[1]) > 0){
+      cols <- strsplit(data, "\t")
+      if (all(lengths(cols) == length(cols[[1]]))){
+        type <- "dataFrame"
+      }
+    }
+  }
+
+  if (type == "dataFrame"){
     data <- strsplit(data, "\t")
     start <- ifelse(header, 2, 1)
 
@@ -23,8 +32,8 @@ clip.read <- function(format = "character", header = TRUE){
 
     if(header){ colnames(df) <- data[[1]] }
     data <- factorToCharacter(df)
-  } else {
-    stop("Incorrect format chosen!")
+  } else if (type != "character"){
+    stop("Incorrect type chosen!")
   }
 
   return (data)

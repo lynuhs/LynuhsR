@@ -4,10 +4,10 @@
 \alias{clip.read}
 \title{A function to read data from the clipboard}
 \usage{
-clip.read(format = "character", header = TRUE)
+clip.read(type = "auto", header = TRUE)
 }
 \arguments{
-\item{format}{The format of the output, defaults to character}
+\item{type}{The type of the output, defaults to auto}
 
 \item{header}{If the copied data has a header row for dataFrame, defaults to TRUE}
 
@@ -17,5 +17,5 @@ clip.read(format = "character", header = TRUE)
 This function will copy data from the clipboard
 }
 \examples{
-clip.read(data, format=c("character","dataFrame"), header=TRUE)
+clip.read(data, type=c("auto","character","dataFrame"), header=TRUE)
 }
