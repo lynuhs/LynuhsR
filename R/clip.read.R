@@ -36,5 +36,7 @@ clip.read <- function(type = "auto", header = TRUE){
     stop("Incorrect type chosen!")
   }
 
+  data <- type.convert(data)
+
   return (data)
 }
