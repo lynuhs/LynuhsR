@@ -4,14 +4,16 @@
 \alias{factorToCharacter}
 \title{A convertion function}
 \usage{
-factorToCharacter(data)
+factorToCharacter(data, levels = 0)
 }
 \arguments{
 \item{data}{The data frame or factor vector that should be converted}
+
+\item{levels}{The maximum number of levels in the factor to perform the conversion. Will ignore number of levels if left blank.}
 }
 \description{
-This function will change a data frame's columns from factor to character
+This function will change a data frame's columns or a vector from factor to character
 }
 \examples{
-factorToCharacter(data)
+factorToCharacter(data, levels = 0)
 }
