@@ -7,9 +7,12 @@
 #' @param col.names Decides if the output should keep column names or not, defaults to TRUE
 #' @export
 #' @examples
-#' clip.write(data, sep="\t", row.names=FALSE, col.names=TRUE)
+#' clip.write(data, sep=NULL, row.names=FALSE, col.names=TRUE)
 
-clip.write <- function(data, sep = "\t", row.names = FALSE, col.names = TRUE){
+clip.write <- function(data, sep = NULL, row.names = FALSE, col.names = TRUE){
+  if(is.null(sep)){
+    sep = "\t"
+  }
   if(is.data.frame(data)){
     write.table(data, "clipboard-16384", sep=sep, row.names=row.names, col.names=col.names)
   } else {
@@ -18,6 +21,6 @@ clip.write <- function(data, sep = "\t", row.names = FALSE, col.names = TRUE){
     }, error = function(err){
       stop("argument must be a character vector or a raw vector")
     })
-
+    
   }
 }
