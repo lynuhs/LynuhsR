@@ -11,7 +11,7 @@
 
 clip.write <- function(data, sep = "\t", row.names = FALSE, col.names = TRUE){
   if(is.data.frame(data)){
-    write.table(data, "clipboard", sep=sep, row.names=row.names, col.names=col.names)
+    write.table(data, "clipboard-16384", sep=sep, row.names=row.names, col.names=col.names)
   } else {
     tryCatch({
       writeClipboard(as.character(data))
