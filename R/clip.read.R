@@ -27,16 +27,15 @@ clip.read <- function(type = "auto", header = TRUE){
 
     df <- NULL
     for (i in start:(length(data))){
-      df <- rbind(df, data.frame(matrix(data[[i]], nrow=1)))
+      df <- rbind(df, data.frame(matrix(data[[i]], nrow=1), stringsAsFactors = FALSE))
     }
 
     if(header){ colnames(df) <- data[[1]] }
-    data <- factorToCharacter(df)
+    data <- df
   } else if (type != "character"){
     stop("Incorrect type chosen!")
   }
 
-  data <- type.convert(data)
 
   return (data)
 }
