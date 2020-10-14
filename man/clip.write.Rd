@@ -4,7 +4,7 @@
 \alias{clip.write}
 \title{A function to copy data to the clipboard}
 \usage{
-clip.write(data, sep = "\\t", row.names = FALSE, col.names = TRUE)
+clip.write(data, sep = NULL, row.names = FALSE, col.names = TRUE)
 }
 \arguments{
 \item{data}{The data that should be copied to the clipboard}
@@ -19,5 +19,5 @@ clip.write(data, sep = "\\t", row.names = FALSE, col.names = TRUE)
 This function will copy data to the clipboard and strucutre it in a way that works for Excel
 }
 \examples{
-clip.write(data, sep="\\t", row.names=FALSE, col.names=TRUE)
+clip.write(data, sep=NULL, row.names=FALSE, col.names=TRUE)
 }
