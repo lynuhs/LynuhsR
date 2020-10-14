@@ -9,7 +9,7 @@ clip.write(data, sep = NULL, row.names = FALSE, col.names = TRUE)
 \arguments{
 \item{data}{The data that should be copied to the clipboard}
 
-\item{sep}{The separator which should be used in the copied output, defaults to "\t"}
+\item{sep}{The separator which should be used in the copied output, defaults to NULL}
 
 \item{row.names}{Decides if the output should keep row names or not, defaults to FALSE}
 
