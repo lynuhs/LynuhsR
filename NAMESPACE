@@ -2,5 +2,4 @@
 
 export(clip.read)
 export(clip.write)
-export(factorToCharacter)
 export(strClean)
